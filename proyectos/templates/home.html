@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dsad</title>
-</head>
-<body>
-    <h1>hola</h1>
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for project in Proyectos %}
+
+<h2>{{project.title}}</project></h2>
+<p>{{project.description}}</p>
+<img src="{{project.image.url }}"
+
+    {% if project.url %}
+    <a   href="{{project.url}}">{{project.url}}</a>
+
+    {% endif %} 
+{% endfor %} 
+
+{% endblock %}
